@@ -720,3 +720,42 @@ body:has(.games-hero) .games-hero {
 
 /* END GAMES PAGE / MOBILE PROJECT SHADOW */
 
+
+/* =========================================
+   NAVIGATION / LOGO BOOKMARK
+   ========================================= */
+
+.nav .Logo,
+.nav .logo {
+    position: relative;
+    z-index: 1;
+}
+
+.nav::after {
+    content: "";
+    position: absolute;
+
+    top: -50px;
+    right: -16px;
+
+    width: clamp(125px, 18vw, 205px);
+    height: calc(100% + 45px);
+
+    background: rgba(0, 0, 0, 0.5);
+
+    border-radius: 0 0 22px 22px;
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .nav::after {
+        right: -10px;
+        width: 125px;
+        border-radius: 0 0 16px 16px;
+    }
+}
+
+/* END NAVIGATION / LOGO BOOKMARK */
