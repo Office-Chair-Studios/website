@@ -701,3 +701,22 @@ body:has(.games-hero) .games-hero {
 }
 
 /* END GAMES PAGE / TOP FRAME */
+
+/* =========================================
+   GAMES PAGE / MOBILE PROJECT SHADOW
+   ========================================= */
+
+@media (max-width: 768px) {
+    .game-feature {
+        --cast-x: 0px !important;
+        --cast-y: 12px !important;
+        --cast-scale: 1.01 !important;
+        --cast-skew: 0deg !important;
+        --cast-blur: 12px !important;
+        --cast-opacity: 0.45 !important;
+
+        --tilt-x: 0deg !important;
+    }
+}
+
+/* END GAMES PAGE / MOBILE PROJECT SHADOW */
