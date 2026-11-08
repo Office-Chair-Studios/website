@@ -1,79 +1,205 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- =========================================
+         PAGE SETUP
+         ========================================= -->
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Office Chair Studios | Indie Game Studio</title>
-    <meta name="description" content="Office Chair Studios is an independent game studio creating original video games.">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Anton+SC&family=BBH+Sans+Bartle&family=Quicksand:wght@300..700&family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <meta name="description"
+          content="Office Chair Studios is an independent game studio creating original video games.">
 
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aldrich&family=Anton+SC&family=BBH+Sans+Bartle&family=Quicksand:wght@300..700&family=Work+Sans:wght@100..900&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="css/app.css">
+
 </head>
 
 <body>
-    <main class="banner">
 
-        <nav class="nav" aria-label="Main navigation">
-            <ul>
-                <li>
-                    <a href="index.html" aria-current="page">Home</a>
-                </li>
-            </ul>
+    <!-- =========================================
+         HOMEPAGE HERO
+         ========================================= -->
 
-            <ul>
-                <li>
-                    <a href="games.html">Games</a>
-                </li>
-            </ul>
+    <main>
 
-            <img
-                src="assets/other/Office_Chair_Studios_Icon_v2_trp.png"
-                class="Logo"
-                width="200"
-                alt="Office Chair Studios logo"
-            >
-        </nav>
+        <section class="banner" id="home">
 
-        <section class="intro home-intro">
-            <span class="eyebrow">
-                INDEPENDENT GAME STUDIO
-            </span>
+            <!-- =================================
+                 NAVIGATION
+                 ================================= -->
 
-            <h1>Office Chair Studios</h1>
+            <nav class="nav" aria-label="Main navigation">
 
-            <p>Creating games worth remembering.</p>
+                <ul>
+                    <li>
+                        <a href="index.html" aria-current="page">
+                            Home
+                        </a>
+                    </li>
+                </ul>
 
-            <a href="games.html" class="hero-button">
-                Explore Our Games
-            </a>
+                <ul>
+                    <li>
+                        <a href="games.html">
+                            Games
+                        </a>
+                    </li>
+                </ul>
+
+                <img
+                    src="assets/other/Office_Chair_Studios_Icon_v2_trp.png"
+                    class="Logo"
+                    width="200"
+                    alt="Office Chair Studios logo"
+                >
+
+            </nav>
+
+            <!-- END NAVIGATION -->
+
+
+            <!-- =================================
+                 HERO CONTENT
+                 ================================= -->
+
+            <section class="intro home-intro">
+
+                <span class="eyebrow">
+                    INDEPENDENT GAME STUDIO
+                </span>
+
+                <h1>Office Chair Studios</h1>
+
+                <p>
+                    Creating games worth remembering.
+                </p>
+
+                <a href="games.html" class="hero-button">
+                    Explore Our Games
+                </a>
+
+            </section>
+
+            <!-- HERO CONTENT -->
+
         </section>
 
+        <!-- END HOMEPAGE HERO -->
+
+
+        <!-- =========================================
+             ABOUT US
+             ========================================= -->
+
+        <section class="about-section" id="about">
+
+            <div class="about-container">
+
+                <span class="about-label">
+                    01 / THE STUDIO
+                </span>
+
+                <h2>About Us</h2>
+
+                <div class="about-divider"></div>
+
+                <p>
+                    Office Chair Studios is an independent
+                    game development studio focused on
+                    creating original games.
+                </p>
+
+                <p>
+                    Founded by a solo developer, the studio
+                    works across different genres and ideas,
+                    with an emphasis on gameplay,
+                    presentation, and experimentation.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- END ABOUT US -->
+
+
+        <!-- =========================================
+             LATEST NEWS
+             ========================================= -->
+
+        <section
+            class="news-section"
+            id="news"
+            aria-labelledby="news-title"
+        >
+
+            <div class="news-container">
+
+                <span class="news-label">
+                    02 / ANNOUNCEMENTS
+                </span>
+
+                <h2 id="news-title">
+                    Latest News
+                </h2>
+
+                <div class="news-divider"></div>
+
+                <!-- NEWS EMPTY STATE -->
+                <!-- Replace this when news is available -->
+
+                <div class="news-empty">
+
+                    <h3>
+                        Nothing to announce just yet.
+                    </h3>
+
+                    <p>
+                        Check back for news, events,
+                        and announcements from
+                        Office Chair Studios.
+                    </p>
+
+                </div>
+
+                <!-- END NEWS EMPTY STATE -->
+
+            </div>
+
+        </section>
+
+        <!-- END LATEST NEWS -->
+
+
+        <!-- =========================================
+             FOOTER (COMING NEXT)
+             ========================================= -->
+
+        <!-- Footer will be added here later. -->
+
+        <!-- END FOOTER -->
+
     </main>
-    
-    <section class="about-section" id="about">
-        <div class="about-container">
-            <span class="about-label">01 / THE STUDIO</span>
-
-            <h2>About Us</h2>
-
-            <div class="about-divider"></div>
-
-            <p>
-                Office Chair Studios is an independent game development studio 
-                focused on creating original games.
-            </p>
-
-            <p>
-                Founded by a solo developer, the studio works across 
-                different genres and ideas, with an emphasis on 
-                gameplay, presentation, and experimentation.
-            </p>
-        </div>
-    </section>
 
 </body>
 </html>
