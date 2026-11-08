@@ -684,41 +684,19 @@ body:has(.games-hero)::after {
    GAMES PAGE / TOP FRAME
    ========================================= */
 
-body:has(.games-hero) {
-    --top-frame-height: clamp(10px, 1.8vw, 26px);
-}
-
-/* Horizontal top border */
-body:has(.games-hero) .games-hero::before {
-    content: "";
-    position: absolute;
-
-    top: 0;
-    left: 0;
-    right: 0;
-
-    height: var(--top-frame-height);
-
-    background: #10170d;
-
-    border-bottom: 2px solid #647f43;
+/* Recessed top frame behind the side rails */
+body:has(.games-hero) .games-hero {
+    border-top: clamp(10px, 1.8vw, 26px) solid #151E11;
 
     box-shadow:
-        inset 0 -4px 0 rgba(184, 242, 75, .12);
-
-    z-index: 90;
-    pointer-events: none;
-}
-
-/* Ensure the hero anchors the top frame */
-body:has(.games-hero) .games-hero {
-    position: relative;
+        inset 0 2px 0 #34452a,
+        inset 0 6px 0 rgba(0, 0, 0, .45);
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-    body:has(.games-hero) {
-        --top-frame-height: 8px;
+    body:has(.games-hero) .games-hero {
+        border-top-width: 8px;
     }
 }
 
