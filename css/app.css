@@ -687,3 +687,606 @@ img {
     }
 }
 
+/* =========================================
+   LATEST NEWS
+   ========================================= */
+
+.news-section {
+    background: #090909;
+    color: white;
+    padding: 110px 8% 130px;
+    border-top: 1px solid #222;
+}
+
+.news-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.news-label {
+    font-family: var(--font-body);
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #888;
+}
+
+.news-container h2 {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 6vw, 70px);
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 25px 0;
+}
+
+.news-divider {
+    width: 55px;
+    height: 2px;
+    background: white;
+    margin-bottom: 35px;
+}
+
+.news-empty {
+    padding: clamp(35px, 6vw, 65px) 25px;
+    border: 1px solid #292929;
+    background: #111;
+    text-align: center;
+}
+
+.news-empty h3 {
+    font-family: var(--font-body);
+    font-size: clamp(17px, 2.4vw, 23px);
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.news-empty p {
+    font-family: var(--font-body);
+    font-size: clamp(14px, 1.7vw, 17px);
+    line-height: 1.8;
+    color: #aaa;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    .news-section {
+        padding: 80px 6% 95px;
+    }
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.site-footer {
+    background: #050505;
+    color: white;
+    border-top: 1px solid #252525;
+    padding: 65px 8% 25px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    padding-bottom: 65px;
+}
+
+.footer-brand h2 {
+    font-family: var(--font-display);
+    font-size: clamp(20px, 2.5vw, 30px);
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.footer-brand p {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: #888;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 65px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.footer-column h3 {
+    font-family: var(--font-body);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+    margin-bottom: 6px;
+}
+
+.footer-column a {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: #aaa;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: white;
+}
+
+.footer-column a:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 4px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #252525;
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-bottom p {
+    font-family: var(--font-body);
+    font-size: 11px;
+    color: #777;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .site-footer {
+        padding: 55px 6% 25px;
+    }
+
+    .footer-main {
+        flex-direction: column;
+        gap: 35px;
+        padding-bottom: 45px;
+    }
+
+    .footer-links {
+        gap: 45px;
+    }
+}
+
+
+/* =========================================
+   GAMES PAGE HERO
+   ========================================= */
+
+.games-hero {
+    position: relative;
+    min-height: 75vh;
+    min-height: 75svh;
+    background:
+        radial-gradient(
+            ellipse at 75% 65%,
+            #171717 0%,
+            #080808 45%,
+            #000 85%
+        );
+    border-bottom: 1px solid #222;
+    overflow: hidden;
+}
+
+.games-hero::after {
+    content: "";
+    position: absolute;
+    right: -120px;
+    bottom: -220px;
+    width: 600px;
+    height: 600px;
+    border: 1px solid #242424;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.games-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: clamp(100px, 15vh, 180px) 8% 120px;
+}
+
+.games-eyebrow,
+.game-section-label {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #888;
+}
+
+.games-hero-content h1 {
+    font-family: var(--font-display);
+    font-size: clamp(48px, 8vw, 105px);
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.15;
+    margin: 25px 0;
+}
+
+.games-hero-content p {
+    font-family: var(--font-body);
+    font-size: clamp(16px, 2vw, 21px);
+    line-height: 1.8;
+    color: #aaa;
+}
+
+.games-hero-content .hero-button {
+    margin-top: 35px;
+}
+
+/* END GAMES PAGE HERO */
+
+
+
+/* =========================================
+   CURRENT PROJECT
+   ========================================= */
+
+.game-feature {
+    background: #080808;
+    padding: 110px 0 130px;
+}
+
+.game-feature-heading {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.game-feature h2,
+.future-games h2 {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 6vw, 70px);
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 25px 0;
+}
+
+.game-divider {
+    width: 55px;
+    height: 2px;
+    background: white;
+    margin-bottom: 40px;
+}
+
+.current-game-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    width: 100%;
+    min-height: 620px;
+    background: #101010;
+    border-top: 1px solid #292929;
+    border-bottom: 1px solid #292929;
+    overflow: hidden;
+}
+
+/* Project Artwork */
+
+.current-game-artwork {
+    position: relative;
+    min-width: 0;
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        radial-gradient(
+            circle at center,
+            #252525 0%,
+            #151515 35%,
+            #080808 85%
+        );
+    border-right: 1px solid #292929;
+    overflow: hidden;
+}
+
+.artwork-corner {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-family: var(--font-body);
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #777;
+}
+
+.artwork-geometry {
+    position: relative;
+    width: 220px;
+    height: 220px;
+}
+
+.geometry-square {
+    position: absolute;
+    inset: 25px;
+    border: 1px solid #555;
+}
+
+.geometry-square:nth-child(1) {
+    transform: rotate(15deg);
+}
+
+.geometry-square:nth-child(2) {
+    transform: rotate(45deg);
+    border-color: #777;
+}
+
+.geometry-square:nth-child(3) {
+    inset: 55px;
+    border-color: #aaa;
+}
+
+.geometry-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    background: #ccc;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.artwork-caption {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    font-family: var(--font-body);
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #777;
+}
+
+/* Project Information */
+
+.current-game-info {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: clamp(35px, 5vw, 90px);
+}
+
+.development-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-body);
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #aaa;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #bbb;
+}
+
+.current-game-info h3 {
+    font-family: var(--font-display);
+    font-size: clamp(26px, 3.2vw, 48px);
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+    max-width: 100%;
+    margin: 25px 0;
+}
+
+.project-info-divider {
+    width: 45px;
+    height: 1px;
+    background: #555;
+    margin-bottom: 25px;
+}
+
+.project-subtitle {
+    font-family: var(--font-body);
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.current-game-info p {
+    font-family: var(--font-body);
+    font-size: clamp(14px, 1.4vw, 17px);
+    line-height: 1.9;
+    color: #aaa;
+    max-width: 420px;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .game-feature {
+        padding: 80px 0 95px;
+    }
+
+    .game-feature-heading {
+        padding: 0 6%;
+    }
+
+    .current-game-card {
+        grid-template-columns: 1fr;
+        min-height: 0;
+    }
+
+    .current-game-artwork {
+        min-height: 350px;
+        border-right: none;
+        border-bottom: 1px solid #292929;
+    }
+
+    .current-game-info {
+        padding: 50px 6%;
+    }
+
+    .current-game-info h3 {
+        font-size: clamp(28px, 8vw, 44px);
+    }
+
+    .artwork-geometry {
+        transform: scale(0.8);
+    }
+}
+
+/* END CURRENT PROJECT */
+
+
+/* =========================================
+   FUTURE PROJECTS
+   ========================================= */
+
+.future-games {
+    background: #090909;
+    border-top: 1px solid #222;
+    padding: 110px 8% 130px;
+}
+
+.future-games-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.game-placeholder {
+    position: relative;
+    min-height: 320px;
+    background: #101010;
+    border: 1px solid #292929;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.game-placeholder:hover {
+    border-color: #555;
+    background: #151515;
+}
+
+.placeholder-number {
+    font-family: var(--font-body);
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #777;
+}
+
+.placeholder-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
+}
+
+.placeholder-plus {
+    font-family: var(--font-body);
+    font-size: 40px;
+    font-weight: 300;
+    color: #555;
+}
+
+.placeholder-content h3 {
+    font-family: var(--font-display);
+    font-size: clamp(18px, 2.5vw, 28px);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.placeholder-content p {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: #888;
+}
+
+/* END FUTURE PROJECTS */
+
+
+/* =========================================
+   GAMES PAGE MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .games-hero {
+        min-height: 65vh;
+        min-height: 65svh;
+    }
+
+    .games-hero-content {
+        padding: 90px 6% 100px;
+    }
+
+    .games-hero::after {
+        width: 350px;
+        height: 350px;
+        right: -180px;
+        bottom: -100px;
+    }
+
+    .game-feature,
+    .future-games {
+        padding: 80px 6% 95px;
+    }
+
+    .current-game-card {
+        grid-template-columns: 1fr;
+    }
+
+    .current-game-artwork {
+        min-height: 280px;
+        border-right: none;
+        border-bottom: 1px solid #292929;
+    }
+
+    .current-game-info {
+        padding: 35px 25px 45px;
+    }
+
+    .project-reference {
+        margin-top: 30px;
+    }
+
+    .future-games-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .game-placeholder {
+        min-height: 260px;
+    }
+}
+
+/* END GAMES PAGE MOBILE */
