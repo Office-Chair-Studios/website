@@ -1,82 +1,689 @@
-/* Office Chair Studios — cleaned stylesheet
-   Retains the existing class names and asset paths. */
-:root { color-scheme: dark; }
-*, *::before, *::after { box-sizing: border-box; }
-* { margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { min-width: 280px; background: #000; color: #fff; font-family: sans-serif; }
-img, video { max-width: 100%; }
-a { color: inherit; }
 
-/* Main page and game hero */
-.banner, .bgf { position: relative; isolation: isolate; width: 100%; min-height: 100vh; min-height: 100svh; background-color: #000; background-size: cover; background-position: center; overflow: hidden; }
-.bgv { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; max-width: none; object-fit: cover; }
-.nav { position: relative; z-index: 2; width: min(70%, 1200px); margin-inline: auto; padding: 30px 0; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-.nav ul { list-style: none; }
-.nav ul li { display: inline-block; position: relative; margin: 0 15px; }
-.nav ul li a { position: relative; display: inline-block; font-family: 'BBH Sans Bartle', sans-serif; font-size: 2rem; font-weight: 400; text-transform: uppercase; text-decoration: none; color: #fff; }
-.nav ul li a::after { content: ''; position: absolute; left: 0; bottom: -5px; height: 5px; width: 0; background: #fff; transition: width .3s ease; }
-.nav ul li a:hover::after, .nav ul li a:focus-visible::after { width: 100%; }
-.nav a:focus-visible { outline: 2px solid #fff; outline-offset: 7px; }
-.nav .Logo, .nav .logo { width: min(200px, 30vw); height: auto; flex-shrink: 0; }
-.intro, .sutext { position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 100%; padding: 1.5rem; text-align: center; color: #fff; }
-.intro h1 { font-family: 'BBH Sans Bartle', sans-serif; font-size: clamp(1.75rem, 3vw, 3rem); font-weight: 400; }
-.intro p { width: min(75%, 900px); margin: auto; padding: 10px; font-family: 'Aldrich', sans-serif; font-size: clamp(1rem, 2vw, 25px); font-weight: 400; }
+/* =========================================
+   OFFICE CHAIR STUDIOS
+   Main Stylesheet
+   ========================================= */
 
-/* Text / content sections */
-.bginfo, .ocsyap, .cbyap { display: flex; flex-direction: column; justify-content: center; min-height: 100vh; min-height: 100svh; padding: 4rem 1.5rem; background: #000; }
-.suintro, .yap, .cintro, .fusion, .inventor, .showcase { width: 100%; margin-inline: auto; text-align: center; color: #fff; }
-.suintro h1, .suintro h2 { font-family: 'BBH Sans Bartle', sans-serif; font-size: clamp(2.5rem, 6vw, 75px); font-weight: 400; }
-.suintro p { width: min(75%, 1000px); margin-inline: auto; padding: 10px; font-family: 'Aldrich', sans-serif; font-size: clamp(1.125rem, 2.5vw, 30px); font-weight: 400; line-height: 1.5; }
-.yap h1, .yap h2, .cintro h1, .fusion h1, .inventor h1, .showcase h1, .halfas-cook h1 { font-family: 'Anton SC', sans-serif; font-size: clamp(2.5rem, 6vw, 75px); font-weight: 400; }
-.yap h2 { margin-top: clamp(3rem, 15vw, 225px); }
-.yap p, .cintro p, .fusion p, .inventor p, .halfas-cook p { width: min(75%, 1000px); margin-inline: auto; padding: 10px; font-family: 'Quicksand', sans-serif; font-size: clamp(1.125rem, 2.5vw, 30px); line-height: 1.5; }
-.ocsyap img, .yap img, .cbyap img { display: block; width: auto; max-width: 100%; height: auto; max-height: 350px; margin-inline: auto; padding-block: 25px; object-fit: contain; }
-.cintro h1 { margin-bottom: clamp(3rem, 15vw, 300px); }
-.fusion h1, .inventor h1 { margin-bottom: clamp(3rem, 18vw, 350px); }
-.showcase h1 { margin-bottom: clamp(3rem, 25vw, 600px); }
-.halfas-cook { text-align: center; color: #fff; }
-.halfas-cook h1 { margin-bottom: clamp(3rem, 15vw, 300px); }
+:root {
+    --bg: #000;
+    --text: #fff;
+    --muted: #aaa;
+    --font-display: "BBH Sans Bartle", sans-serif;
+    --font-body: "Aldrich", sans-serif;
+    --font-heading: "Anton SC", sans-serif;
+    --font-secondary: "Quicksand", sans-serif;
+}
 
-/* Existing game artwork backgrounds */
-.controls, .waves, .highscore, .soundtrack, .halfas, .cert, .showcse, .goog { width: 100%; min-height: 100vh; min-height: 100svh; background-size: cover; background-position: center; }
-.controls { background-image: url('../assets/other/movement.png'); }
-.waves { background-image: url('../assets/other/waves.png'); }
-.highscore { background-image: url('../assets/other/timer.png'); }
-.soundtrack { background-image: url('../assets/other/music.png'); }
-.halfas { background-image: url('../assets/other/HAS Blur.png'); }
-.cert { background-image: url('../assets/other/Guhuh.png'); display: flex; align-items: center; }
-.showcse { background-image: url('../assets/other/CB 6 and CB 8 w text.png'); display: flex; align-items: center; }
-.goog { background-image: url('../assets/other/goog.png'); }
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 
-/* Existing music player */
-.mpc { width: min(500px, calc(100% - 2rem)); min-height: 75px; margin: 300px auto 0; border-radius: 25px; background: rgb(88 88 88 / 75%); }
-.mpcnav { display: flex; position: relative; top: 17px; left: 5%; text-align: center; }
-.mpcnav .cir { width: 40px; height: 40px; line-height: 41px; border-radius: 50%; background: #fff; box-shadow: 0 5px 10px #000; }
-.trackname { display: flex; position: relative; left: 5%; }
-.trackname h1 { font-family: 'Anton SC', sans-serif; font-size: 28px; color: #fff; }
-#playback { appearance: none; display: block; position: relative; left: 22%; width: min(225px, 70%); height: 10px; margin: 16px 0; border-radius: 4px; background: #000; cursor: pointer; }
-#playback::-webkit-slider-thumb { appearance: none; width: 20px; height: 20px; border: 4px solid #fff; border-radius: 50%; background: #fff; }
-#playback::-moz-range-thumb { width: 12px; height: 12px; border: 4px solid #fff; border-radius: 50%; background: #fff; }
+* {
+    margin: 0;
+    padding: 0;
+}
 
-/* Progressive scroll reveal: visible by default in unsupported browsers */
-@keyframes fadequick { 0% { opacity: 0; } 25%, 100% { opacity: 1; } }
-@keyframes fade { 0% { opacity: 0; } 50%, 100% { opacity: 1; } }
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+
+.nav {
+    width: 70%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+}
+
+.nav ul {
+    list-style: none;
+}
+
+.nav ul li {
+    display: inline-block;
+    position: relative;
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.nav ul li a:hover::after,
+.nav ul li a:focus-visible::after {
+    width: 100%;
+}
+
+.nav .Logo,
+.nav .logo {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* =========================================
+   HOMEPAGE
+   ========================================= */
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    background: black;
+    background-size: cover;
+    background-position: center;
+}
+
+.intro {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.intro h1 {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 5vw, 72px);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.intro p {
+    width: 75%;
+    max-width: 800px;
+    margin: 15px auto 0;
+    font-family: var(--font-body);
+    font-size: clamp(16px, 2vw, 25px);
+    line-height: 1.6;
+}
+
+/* Homepage-only styling */
+
+.home-intro {
+    padding: 30px 20px;
+}
+
+.eyebrow {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 14px 28px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.hero-button:hover {
+    background: #ccc;
+    transform: translateY(-3px);
+}
+
+.hero-button:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 4px;
+}
+
+/* =========================================
+   GAME PAGE VIDEO
+   ========================================= */
+
+.bgf {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    background: black;
+    overflow: hidden;
+}
+
+.bgv {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =========================================
+   GAME INFORMATION
+   ========================================= */
+
+.bginfo {
+    min-height: 1080px;
+    background: black;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.suintro {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 50px 20px;
+}
+
+.suintro h1,
+.suintro h2 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(36px, 6vw, 75px);
+    margin-bottom: 20px;
+}
+
+.suintro p {
+    width: 75%;
+    max-width: 1000px;
+    margin: auto;
+    font-family: var(--font-body);
+    font-size: clamp(18px, 2.5vw, 30px);
+    line-height: 1.6;
+    padding: 10px;
+}
+
+/* =========================================
+   ADDITIONAL GAME SECTIONS
+   ========================================= */
+
+.ocsyap {
+    min-height: 1150px;
+    background: black;
+}
+
+.ocsyap img,
+.yap img,
+.cbyap img {
+    height: 300px;
+    width: auto;
+    padding: 25px 0;
+}
+
+.yap {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 80px 20px;
+}
+
+.yap h1,
+.yap h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(36px, 6vw, 75px);
+}
+
+.yap h2 {
+    margin-top: 225px;
+}
+
+.yap p {
+    margin: auto;
+    width: 75%;
+    font-family: var(--font-secondary);
+    font-size: clamp(18px, 3vw, 30px);
+    padding: 10px;
+    line-height: 1.6;
+}
+
+.sutext {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+
+/* =========================================
+   BACKGROUND SECTIONS
+   ========================================= */
+
+.controls,
+.waves,
+.highscore,
+.soundtrack,
+.halfas,
+.cert,
+.showcse,
+.goog {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.controls {
+    background-image: url("../assets/other/movement.png");
+}
+
+.waves {
+    background-image: url("../assets/other/waves.png");
+}
+
+.highscore {
+    background-image: url("../assets/other/timer.png");
+}
+
+.soundtrack {
+    background-image: url("../assets/other/music.png");
+}
+
+.halfas {
+    background-image: url("../assets/other/HAS Blur.png");
+}
+
+.cert {
+    background-image: url("../assets/other/Guhuh.png");
+    display: flex;
+}
+
+.showcse {
+    background-image: url("../assets/other/CB 6 and CB 8 w text.png");
+    display: flex;
+}
+
+.goog {
+    background-image: url("../assets/other/goog.png");
+}
+
+/* =========================================
+   FEATURE TEXT
+   ========================================= */
+
+.cintro {
+    width: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+
+.cintro h1,
+.fusion h1,
+.inventor h1,
+.showcase h1,
+.halfas-cook h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(36px, 6vw, 75px);
+}
+
+.cintro h1,
+.halfas-cook h1 {
+    margin-bottom: 300px;
+}
+
+.cintro p,
+.fusion p,
+.inventor p,
+.halfas-cook p {
+    margin: auto;
+    width: 75%;
+    font-family: var(--font-secondary);
+    font-size: clamp(18px, 3vw, 30px);
+    padding: 10px;
+    line-height: 1.6;
+}
+
+.fusion,
+.inventor,
+.showcase {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.fusion {
+    top: 30%;
+    transform: translateY(-50%);
+}
+
+.inventor {
+    top: 33%;
+    transform: translateY(-50%);
+}
+
+.showcase {
+    top: 30%;
+    transform: translateY(-50%);
+}
+
+.fusion h1,
+.inventor h1 {
+    margin-bottom: 350px;
+}
+
+.showcase h1 {
+    margin-bottom: 600px;
+}
+
+.cbyap {
+    min-height: 1000px;
+    background: black;
+}
+
+/* =========================================
+   MUSIC PLAYER
+   ========================================= */
+
+.mpc {
+    background: rgba(88, 88, 88, 0.75);
+    border-radius: 25px;
+    width: min(500px, 90%);
+    min-height: 75px;
+    margin: 300px auto 0;
+    position: relative;
+}
+
+.mpcnav {
+    display: flex;
+    position: relative;
+    top: 23%;
+    left: 5%;
+    text-align: center;
+}
+
+.mpcnav .cir {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 41px;
+    background: white;
+    box-shadow: 0 5px 10px black;
+}
+
+.trackname {
+    display: flex;
+    position: relative;
+    left: 5%;
+}
+
+.trackname h1 {
+    font-family: var(--font-heading);
+    font-size: 28px;
+    color: white;
+}
+
+#playback {
+    appearance: none;
+    -webkit-appearance: none;
+    width: min(225px, 55%);
+    height: 10px;
+    background: black;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 16px 0;
+    display: flex;
+    position: relative;
+    left: 22%;
+}
+
+#playback::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    background: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 4px solid white;
+}
+
+#playback::-moz-range-thumb {
+    background: white;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 4px solid white;
+}
+
+/* =========================================
+   SCROLL ANIMATIONS
+   ========================================= */
+
+@keyframes fadequick {
+    0% { opacity: 0; }
+    25%, 100% { opacity: 1; }
+}
+
+@keyframes fade {
+    0% { opacity: 0; }
+    50%, 100% { opacity: 1; }
+}
+
 @supports (animation-timeline: view()) {
-  .suintro h1, .suintro h2, .suintro p, .cintro h1, .cintro p, .fusion h1, .inventor h1 { animation: fadequick linear both; animation-timeline: view(); }
-  .showcase h1 { animation: fade linear both; animation-timeline: view(); }
+    .suintro h1,
+    .suintro h2,
+    .suintro p,
+    .cintro h1,
+    .cintro p,
+    .fusion h1,
+    .inventor h1 {
+        animation: fadequick linear both;
+        animation-timeline: view();
+    }
+
+    .showcase h1 {
+        animation: fade linear both;
+        animation-timeline: view();
+    }
 }
 
-@media (max-width: 700px) {
-  .nav { width: 92%; padding: 18px 0; gap: .5rem; }
-  .nav ul li { margin: 0 4px; }
-  .nav ul li a { font-size: clamp(.85rem, 3.8vw, 1.5rem); }
-  .nav .Logo, .nav .logo { width: min(115px, 27vw); }
-  .intro p, .suintro p, .yap p, .cintro p, .fusion p, .inventor p, .halfas-cook p { width: 95%; }
-  .mpc { margin-top: 5rem; }
+/* =========================================
+   MOBILE RESPONSIVENESS
+   ========================================= */
+
+@media (max-width: 768px) {
+    .nav {
+        width: 95%;
+        padding: 20px 10px;
+        gap: 10px;
+    }
+
+    .nav ul li {
+        margin: 0 5px;
+    }
+
+    .nav ul li a {
+        font-size: clamp(12px, 3vw, 20px);
+    }
+
+    .nav .Logo,
+    .nav .logo {
+        width: clamp(70px, 20vw, 120px);
+    }
+
+    .intro h1 {
+        font-size: clamp(28px, 7vw, 48px);
+    }
+
+    .intro p {
+        width: 95%;
+        font-size: 16px;
+    }
+
+    .eyebrow {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .hero-button {
+        padding: 12px 20px;
+        font-size: 12px;
+    }
+
+    .bginfo {
+        min-height: 70vh;
+    }
+
+    .suintro p,
+    .yap p,
+    .cintro p,
+    .fusion p,
+    .inventor p,
+    .halfas-cook p {
+        width: 95%;
+    }
+
+    .ocsyap,
+    .cbyap {
+        min-height: auto;
+    }
+
+    .cintro h1,
+    .fusion h1,
+    .inventor h1,
+    .showcase h1,
+    .halfas-cook h1 {
+        margin-bottom: 50px;
+    }
+
+    .yap h2 {
+        margin-top: 60px;
+    }
+
+    .mpc {
+        margin-top: 100px;
+    }
 }
+
+/* =========================================
+   ACCESSIBILITY
+   ========================================= */
+
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after { animation: none !important; transition: none !important; }
-  .bgv { display: none; }
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .bgv {
+        display: none;
+    }
 }
+
+/* =========================================
+   ABOUT US
+   ========================================= */
+
+.about-section {
+    background: #080808;
+    color: white;
+    padding: 120px 8%;
+    border-top: 1px solid #222;
+}
+
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-label {
+    font-family: "Aldrich", sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #888;
+}
+
+.about-container h2 {
+    font-family: "BBH Sans Bartle", sans-serif;
+    font-size: clamp(36px, 6vw, 70px);
+    font-weight: 400;
+    margin: 25px 0;
+    text-transform: uppercase;
+}
+
+.about-divider {
+    width: 55px;
+    height: 2px;
+    background: white;
+    margin-bottom: 35px;
+}
+
+.about-container p {
+    font-family: "Aldrich", sans-serif;
+    font-size: clamp(16px, 2vw, 21px);
+    line-height: 1.9;
+    color: #bbb;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        padding: 80px 6%;
+    }
+}
+
