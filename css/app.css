@@ -1,0 +1,444 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.banner{
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.nav{
+    width: 70%;
+    margin: auto;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    cursor: pointer;
+}
+.nav ul li{
+    list-style: none;
+    display:  inline-block;
+    position: relative;
+    margin: 0 15px;
+}
+.nav ul li a{
+    font-family: "BBH Sans Bartle", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 200%;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+}
+.nav ul li ::after{
+    content: '';
+    height: 5px;
+    width: 0;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transition: 0.5s;
+}
+.nav ul li :hover:after{
+    width: 100%;
+}
+.intro{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    margin: auto;
+    transform: translateY(-50%);
+    text-align: center;
+    color:  white;
+}
+.intro h1{
+    font-family: "BBH Sans Bartle", sans-serif;
+    font-size: 250%;
+    font-weight: 400;
+    font-style: normal;
+}
+.intro p{
+    margin: auto;
+    width: 75%;
+    font-family: "Aldrich", sans-serif;
+    font-weight: 350;
+    font-size: 25px;
+    font-style: normal;
+    left: auto;
+    padding: 10px;
+}
+.bgf{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.bgv{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.sutext{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    margin: auto;
+    transform: translateY(-50%);
+    text-align: center;
+    color:  white;
+}
+.bginfo{
+    height: 1080px; 
+    background-color: black;
+}
+.ocsyap{
+    height: 1150px; 
+    background-color: black;
+}
+.ocsyap img{
+    height: 300px; 
+    width: auto;
+    padding-top: 25px;
+    padding-bottom: 25px; 
+}
+.yap{
+    width: 100%;
+    position: relative;
+    top: 50%;
+    margin: auto;
+    transform: translateY(-50%);
+    text-align: center;
+    color:  white;
+}
+.yap img{
+    height: 300px; 
+    width: auto;
+    padding-top: 25px;
+    padding-bottom: 25px; 
+}
+.yap h1{
+    font-family: "Anton SC", sans-serif;
+    font-size: 75px;
+}
+.yap p{
+    margin: auto;
+    width: 75%;
+    font-family: "Quicksand", sans-serif;
+    font-size: 30px;
+    left: auto;
+    padding: 10px;
+}
+.yap h2{
+    font-family: "Anton SC", sans-serif;
+    font-size: 75px;
+    margin-top: 225px;
+}
+.suintro{
+    width: 100%;
+    position: relative;
+    top: 50%;
+    margin: auto;
+    transform: translateY(-50%);
+    text-align: center;
+    color:  white;
+}
+.suintro h1{
+    font-family: "BBH Sans Bartle", sans-serif;
+    font-weight: 400;
+    font-size: 75px;
+    opacity: 0;
+    animation: fadequick linear;
+    animation-timeline: view();
+}
+.suintro p{
+    margin: auto;
+    width: 75%;
+    font-family: "Aldrich", sans-serif;
+    font-weight: 350;
+    font-size: 30px;
+    left: auto;
+    padding: 10px;
+    opacity: 0;
+    animation: fadequick linear;
+    animation-timeline: view();
+}
+.controls{
+    background-image: url(../assets/other/movement.png);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.cintro{
+    width: 100%;
+    position: relative;
+    top: 50%;
+    margin: auto;
+    transform: translateY(-50%);
+    text-align: center;
+    color:  white;
+}
+.cintro h1{
+    font-family: "Anton SC", sans-serif;
+    font-size: 75px;
+    margin-bottom: 300px;
+    opacity: 0;
+    animation: fadequick linear;
+    animation-timeline: view();
+}
+.cintro p{
+    margin: auto;
+    width: 75%;
+    font-family: "Quicksand", sans-serif;
+    font-size: 30px;
+    left: auto;
+    padding: 10px;
+    opacity: 0;
+    animation: fadequick linear;
+    animation-timeline: view();
+}
+.waves{
+    background-image: url(../assets/other/waves.png);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.highscore{
+    background-image: url(../assets/other/timer.png);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.soundtrack{
+    background-image: url(../assets/other/music.png);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.halfas{
+    background-image: url(../assets/other/HAS\ Blur.png);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.mpc{
+    background-color: rgb(88, 88, 88, 0.75);
+    border-radius: 25px;
+    width: 500px;
+    height: 75px;
+    /*padding: 25px 35px; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+}
+.mpcnav{
+    display: flex;
+    position: relative;
+    top: 23%;
+    left: 5%;
+    text-align: center;
+}
+.mpcnav .cir{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 41px;
+    vertical-align: middle;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 5px 10px rgb(0, 0, 0);
+}
+.trackname{
+    display: flex;
+    position: relative;
+    left: 5%;
+}
+.trackname h1{
+    font-family: "Anton SC", sans-serif;
+    font-size: 28px;
+    color: white;
+}
+#playback{
+    -webkit-appearance: none;
+    width: 225px;
+    height: 10px;
+    background: black;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 16px 0;
+    display: flex;
+    position: relative;
+    left: 22%;
+}
+#playback::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 4px solid white;
+}
+.cert{
+    background-image: url(../assets/other/Guhuh.png);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+.fusion{
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    top: 30%;
+    margin: auto;
+    transform: translateY(-50%);
+    text-align: center;
+    color:  white;
+}
+.fusion h1{
+    font-family: "Anton SC", sans-serif;
+    font-size: 75px;
+    margin-bottom: 350px;
+    opacity: 0;
+    animation: fadequick linear;
+    animation-timeline: view();
+}
+.fusion p{
+    margin: auto;
+    width: 75%;
+    font-family: "Quicksand", sans-serif;
+    font-size: 30px;
+    left: auto;
+    padding: 10px;
+}
+.inventor{
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    top: 33%;
+    margin: auto;
+    transform: translateY(-50%);
+    text-align: center;
+    color:  white;
+}
+.inventor h1{
+    font-family: "Anton SC", sans-serif;
+    font-size: 75px;
+    margin-bottom: 350px;
+    opacity: 0;
+    animation: fadequick linear;
+    animation-timeline: view();
+}
+.inventor p{
+    margin: auto;
+    width: 75%;
+    font-family: "Quicksand", sans-serif;
+    font-size: 30px;
+    left: auto;
+    padding: 10px;
+}
+.showcse{
+    background-image: url(../assets/other/CB\ 6\ and\ CB\ 8\ w\ text.png);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+.showcase{
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    top: 30%;
+    margin: auto;
+    transform: translateY(-50%);
+    text-align: center;
+    color:  white;
+}
+.showcase h1{
+    font-family: "Anton SC", sans-serif;
+    font-size: 75px;
+    margin-bottom: 600px;
+    opacity: 0;
+    animation: fade linear;
+    animation-timeline: view();
+}
+.cbyap{
+    height: 1000px; 
+    background-color: black;
+}
+.cbyap img{
+    height: 300px; 
+    width: auto;
+    padding-top: 25px;
+    padding-bottom: 25px; 
+}
+.halfas-cook h1{
+    font-family: "Anton SC", sans-serif;
+    font-size: 75px;
+    margin-bottom: 300px;
+    color: white;
+}
+.halfas-cook p{
+    margin: auto;
+    width: 75%;
+    font-family: "Quicksand", sans-serif;
+    font-size: 30px;
+    left: auto;
+    padding: 10px;
+    color: white;
+}
+.goog{
+    background-image: url(../assets/other/goog.png);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+@keyframes fadequick {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    25%{
+        opacity: 1;
+    }
+}
+@keyframes fade {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+}
+@media (min-aspect-ratio: 16/9){
+    .bgv{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    .bgv{
+        width: auto;
+        height: 100%;
+    }
+}
